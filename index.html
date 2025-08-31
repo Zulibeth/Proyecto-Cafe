@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café Artesanal en Chile</title>
+  <link rel="stylesheet" href="../proyecto-cafe/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <script defer src="../proyecto-cafe/js/main.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h1>Café Artesanal</h1>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#filtrado">Métodos</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <h2>El resurgimiento del café artesanal en Chile</h2>
+      <p>Descubre el sabor, la cultura y la experiencia detrás de una taza bien hecha.</p>
+      <a href="#filtrado" class="btn-cta">Explorar métodos</a>
+    </section>
+
+    <section id="historia" class="section reveal">
+      <h2>Una historia que renace</h2>
+      <p>Texto sobre el auge del café artesanal, cafés de especialidad, microtostadores y cultura en crecimiento en Chile.</p>
+    </section>
+
+    <section id="filtrado" class="section reveal">
+      <h2>Métodos de filtrado artesanal</h2>
+      <div class="metodos-grid">
+        <div class="metodo">
+          <img src="assets/img/chemex.jpg" alt="Método Chemex" />
+          <h3>Chemex</h3>
+          <p>Descripción breve del método Chemex.</p>
+        </div>
+        <div class="metodo">
+          <img src="assets/img/prensa-francesa.jpg" alt="Prensa francesa" />
+          <h3>Prensa francesa</h3>
+          <p>Descripción breve del método francés.</p>
+        </div>
+        <div class="metodo">
+          <img src="assets/img/v60.jpg" alt="V60" />
+          <h3>V60</h3>
+          <p>Descripción breve del método V60.</p>
+        </div>
+        <div class="metodo">
+          <img src="assets/img/espresso.jpg" alt="Espresso" />
+          <h3>Espresso</h3>
+          <p>Descripción breve del espresso artesanal.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="section reveal">
+      <h2>¿Por qué elegir café artesanal?</h2>
+      <ul class="beneficios-list">
+        <li>Sabor más puro y complejo</li>
+        <li>Origen controlado y ético</li>
+        <li>Apoyo a productores locales</li>
+        <li>Proceso más natural</li>
+      </ul>
+    </section>
+
+    <section id="contacto" class="section reveal">
+      <h2>¿Te interesa saber más?</h2>
+      <form id="contact-form">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo electrónico" required />
+        <textarea name="mensaje" placeholder="Tu mensaje" rows="5"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Café Artesanal. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
