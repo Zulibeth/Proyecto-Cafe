@@ -155,9 +155,12 @@ a {
 
 .metodos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-top: 2rem;
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .metodo {
@@ -181,7 +184,8 @@ a {
 
 .flip-card {
   background-color: transparent;
-  width: 260px;
+  width: 100%;
+  max-width: 260px;
   height: 360px;
   perspective: 1000px;
 }
