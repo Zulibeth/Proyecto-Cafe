@@ -1,92 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café Artesanal en Chile</title>
-  <link rel="stylesheet" href="../proyecto-cafe/css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet" />
-  <script defer src="../proyecto-cafe/js/main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Artesanal en Chile</title>
+    <link rel="stylesheet" href="../proyecto-cafe/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans&display=swap"
+        rel="stylesheet" />
+    <script defer src="../proyecto-cafe/js/main.js"></script>
 </head>
+
 <body>
 
-  <header>
-    <nav class="navbar">
-      <h1>Café Artesanal</h1>
-      <ul class="nav-links" id="nav-menu">
-        <li><a href="#historia">Historia</a></li>
-        <li><a href="#filtrado">Métodos</a></li>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-  </header>
+    <header>
+        <nav class="navbar">
+            <h1>Café Artesanal</h1>
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#filtrado">Métodos</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    </header>
 
-  <main>
-    <section id="hero" class="hero">
-      <h2>El resurgimiento del café artesanal en Chile</h2>
-      <p>Descubre el sabor, la cultura y la experiencia detrás de una taza bien hecha.</p>
-      <a href="#filtrado" class="btn-cta">Explorar métodos</a>
-    </section>
+    <main>
+        <section id="hero" class="hero">
+            <h2>El resurgimiento del café artesanal en Chile</h2>
+            <p>Descubre el sabor, la cultura y la experiencia detrás de una taza bien hecha.</p>
+            <a href="#filtrado" class="btn-cta">Explorar métodos</a>
+        </section>
 
-    <section id="historia" class="section reveal">
-      <h2>Una historia que renace</h2>
-      <p>Texto sobre el auge del café artesanal, cafés de especialidad, microtostadores y cultura en crecimiento en Chile.</p>
-    </section>
+        <section id="historia" class="section reveal">
+            <h2>Una historia que renace</h2>
+            <p>
+                Durante décadas, el café fue simplemente una bebida funcional: rápida, fuerte y sin mucho más que
+                ofrecer que su cafeína.
+                Pero en los últimos años, algo cambió en Chile. Una nueva cultura del café comenzó a brotar desde
+                cafeterías independientes,
+                microtostadores y hogares curiosos por explorar sabores más allá del típico instantáneo.
+            </p>
+            <p>
+                Hoy, el café artesanal vive un resurgimiento potente. Se valora el origen del grano, el método de
+                preparación y
+                sobre todo, la experiencia. Tomar café dejó de ser una rutina… y se transformó en un ritual. ¿Te sumas?
+            </p>
+        </section>
 
-    <section id="filtrado" class="section reveal">
-      <h2>Métodos de filtrado artesanal</h2>
-      <div class="metodos-grid">
-        <div class="metodo">
-          <img src="assets/img/chemex.jpg" alt="Método Chemex" />
-          <h3>Chemex</h3>
-          <p>Descripción breve del método Chemex.</p>
-        </div>
-        <div class="metodo">
-          <img src="assets/img/prensa-francesa.jpg" alt="Prensa francesa" />
-          <h3>Prensa francesa</h3>
-          <p>Descripción breve del método francés.</p>
-        </div>
-        <div class="metodo">
-          <img src="assets/img/v60.jpg" alt="V60" />
-          <h3>V60</h3>
-          <p>Descripción breve del método V60.</p>
-        </div>
-        <div class="metodo">
-          <img src="assets/img/espresso.jpg" alt="Espresso" />
-          <h3>Espresso</h3>
-          <p>Descripción breve del espresso artesanal.</p>
-        </div>
-      </div>
-    </section>
+        <section id="filtrado" class="section reveal">
+            <h2>Métodos de filtrado artesanal</h2>
+            <div class="metodos-grid">
 
-    <section id="beneficios" class="section reveal">
-      <h2>¿Por qué elegir café artesanal?</h2>
-      <ul class="beneficios-list">
-        <li>Sabor más puro y complejo</li>
-        <li>Origen controlado y ético</li>
-        <li>Apoyo a productores locales</li>
-        <li>Proceso más natural</li>
-      </ul>
-    </section>
+                <!-- Tarjeta Chemex -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/chemex.jpg" alt="Método Chemex" />
+                            <h3>Chemex</h3>
+                            <p>Elegante y limpio, produce un café suave con notas claras, ideal para cafés de origen
+                                único.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>¿Cómo prepararlo en casa?</h4>
+                            <ol>
+                                <li>Hierve agua y déjala reposar 30 seg.</li>
+                                <li>Coloca el filtro y enjuágalo.</li>
+                                <li>Agrega 30g de café medio-grueso.</li>
+                                <li>Preinfusiona con 60ml de agua (30s).</li>
+                                <li>Agrega lentamente 420ml.</li>
+                                <li>Filtra y sirve (4–5 min).</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
 
-    <section id="contacto" class="section reveal">
-      <h2>¿Te interesa saber más?</h2>
-      <form id="contact-form">
-        <input type="text" name="nombre" placeholder="Tu nombre" required />
-        <input type="email" name="email" placeholder="Tu correo electrónico" required />
-        <textarea name="mensaje" placeholder="Tu mensaje" rows="5"></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+                <!-- Tarjeta Prensa Francesa -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/prensa-francesa.jpg" alt="Prensa Francesa" />
+                            <h3>Prensa Francesa</h3>
+                            <p>Intenso y con cuerpo. Extrae aceites naturales para una experiencia más rica.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>¿Cómo prepararlo en casa?</h4>
+                            <ol>
+                                <li>Agrega 30g de café grueso.</li>
+                                <li>Vierte 500ml de agua caliente.</li>
+                                <li>Remueve suavemente.</li>
+                                <li>Coloca la tapa sin presionar.</li>
+                                <li>Espera 4 minutos.</li>
+                                <li>Presiona y sirve.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
 
-  <footer>
-    <p>© 2025 Café Artesanal. Todos los derechos reservados.</p>
-  </footer>
+                <!-- Tarjeta V60 -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/v60.jpg" alt="Método V60" />
+                            <h3>V60</h3>
+                            <p>Precisión y claridad. Método japonés que resalta notas delicadas del café.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>¿Cómo prepararlo en casa?</h4>
+                            <ol>
+                                <li>Enjuaga el filtro con agua caliente.</li>
+                                <li>Agrega 15g de café medio.</li>
+                                <li>Preinfusiona con 30ml de agua (30s).</li>
+                                <li>Agrega lentamente 240ml.</li>
+                                <li>Filtra (2.5–3 min).</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Espresso (Moka) -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/espresso.jpg" alt="Método Espresso" />
+                            <h3>Espresso</h3>
+                            <p>Concentrado y aromático. Un clásico italiano, intenso y rápido.</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <h4>¿Cómo prepararlo en casa?</h4>
+                            <ol>
+                                <li>Llena la moka con agua hasta la válvula.</li>
+                                <li>Agrega café molido fino (sin presionar).</li>
+                                <li>Arma la moka y caliéntala.</li>
+                                <li>Espera a que suba el café.</li>
+                                <li>Retira y sirve al instante.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Moka (Cafetera Italiana) -->
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/moka.jpg" alt="Método Moka" />
+                            <h3>Cafetera Moka</h3>
+                            <p>
+                                Ícono de las cocinas italianas. Produce un café intenso y con cuerpo, ideal para amantes del espresso casero.
+                            </p>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="longText">¿Cómo prepararlo en casa?</h4>
+                            <ol>
+                                <li>Calienta agua y llénala en la base hasta justo debajo de la válvula.</li>
+                                <li>Llena el embudo con café molido fino (como azúcar flor), sin presionar.</li>
+                                <li>Arma la moka (base + embudo + parte superior).</li>
+                                <li>Llévala a fuego medio con la tapa abierta.</li>
+                                <li>Cuando empiece a salir el café, baja el fuego y espera a que termine de subir.</li>
+                                <li>Retira del fuego apenas termina y revuelve el café antes de servir.</li>
+                            </ol>
+                            <h2>Tips extra ☕</h2>
+                            <ul>
+                                <li>Usar agua caliente desde el inicio evita que el café se queme.</li>
+                                <li>Nunca lo dejes en el fuego hasta que “escupa”.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarjeta De goteo (Cafetera electrica tradicional) -->
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="assets/img/electrica.jpg" alt="Método Electrico" />
+                            <h3>Cafetera Eléctrica</h3>
+                            <p>
+                                Práctica y popular. Si se usa bien, permite obtener un café limpio y equilibrado, ideal para el día a día.
+                            </p>
+
+                        </div>
+                        <div class="flip-card-back">
+                            <h4 class="longText">¿Cómo prepararlo en casa?</h4>
+                            <ol>
+                                <li>Usa agua filtrada o embotellada si es posible.</li>
+                                <li>Agrega café molido medio (como azúcar rubia) al filtro: aprox. 10g por taza.</li>
+                                <li>Nivela el café en el filtro sin presionar.</li>
+                                <li>Enciende la cafetera y deja que el ciclo completo termine.</li>
+                                <li>Una vez listo, remueve la jarra del calor para evitar sobreextracción.</li>
+                                <li>Sirve fresco y consume dentro de 20 minutos.</li>
+                            </ol>
+                            <h2>Tips extra ☕</h2>
+                            <ul>
+                                <li>Usa filtros de papel sin blanquear y enjuágalos antes.</li>
+                                <li>No dejes el café “cocinándose” en la placa caliente por mucho tiempo.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="beneficios" class="section reveal">
+            <h2>¿Por qué elegir café artesanal?</h2>
+            <ul class="beneficios-list">
+                <li>Proceso más natural</li>
+                <li>Sabor más puro y complejo</li>
+                <li>Apoyo a productores locales</li>
+                <li>Origen controlado y ético</li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="section reveal">
+            <h2>¿Te interesa saber más?</h2>
+            <form id="contact-form">
+                <input type="text" name="nombre" placeholder="Tu nombre" required />
+                <input type="email" name="email" placeholder="Tu correo electrónico" required />
+                <textarea name="mensaje" placeholder="Tu mensaje" rows="5"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Café Artesanal. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
+
 </html>
+

@@ -60,3 +60,19 @@ if (form) {
     form.reset();
   });
 }
+
+// Flip cards en móvil con clic
+const flipCards = document.querySelectorAll('.flip-card');
+
+flipCards.forEach(card => {
+  card.addEventListener('click', () => {
+    // Cerrar otras
+    flipCards.forEach(other => {
+      if (other !== card) other.classList.remove('flipped');
+    });
+
+    // Alternar esta
+    card.classList.toggle('flipped');
+  });
+});
+
