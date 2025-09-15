@@ -76,3 +76,19 @@ flipCards.forEach(card => {
   });
 });
 
+//Actualización de precios
+async function fetchPrices() {
+      try {
+        const res = await fetch("/api/precios");
+        const data = await res.json();
+        document.getElementById("precio-altura").textContent = data["Café Altura - Brasil Peru (250g)"];
+        document.getElementById("precio-mandrake").textContent = data["Café Mandrake - Blend Espresso (1kg)"];
+        document.getElementById("precio-dLara").textContent = data["D'Lara - Blend Saphire El Salvador (250g)"];
+      } catch (e) {
+        console.error("Error al obtener los precios", e);
+      }
+    }
+
+    fetchPrices();
+    setInterval(fetchPrices, 300000); // cada 5 minutos
+

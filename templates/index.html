@@ -5,16 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Café Artesanal en Chile</title>
-    <link rel="stylesheet" href="../proyecto-cafe/css/style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Open+Sans&display=swap"
         rel="stylesheet" />
-    <script defer src="../proyecto-cafe/js/main.js"></script>
+   
+
 </head>
 
 <body>
-
     <header>
         <nav class="navbar">
             <h1>Café Artesanal</h1>
@@ -36,7 +36,7 @@
         </section>
 
         <section id="historia" class="section reveal">
-            <h2>Una historia que renace</h2>
+            <h2 class="historia">Una historia que renace</h2>
             <p>
                 Durante décadas, el café fue simplemente una bebida funcional: rápida, fuerte y sin mucho más que
                 ofrecer que su cafeína.
@@ -59,7 +59,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/img/chemex.jpg" alt="Método Chemex" />
+                            <img src="{{ url_for('static', filename='assets/img/chemex.jpg') }}" alt="Chemex" alt="Método Chemex" />
                             <h3>Chemex</h3>
                             <p>Elegante y limpio, produce un café suave con notas claras, ideal para cafés de origen
                                 único.</p>
@@ -82,7 +82,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/img/prensa-francesa.jpg" alt="Prensa Francesa" />
+                            <img src="{{ url_for('static', filename='assets/img/prensa-francesa.jpg') }}" alt="Prensa Francesa" />
                             <h3>Prensa Francesa</h3>
                             <p>Intenso y con cuerpo. Extrae aceites naturales para una experiencia más rica.</p>
                         </div>
@@ -104,7 +104,7 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/img/v60.jpg" alt="Método V60" />
+                            <img src="{{ url_for('static', filename='assets/img/v60.jpg') }}" alt="Método V60" />
                             <h3>V60</h3>
                             <p>Precisión y claridad. Método japonés que resalta notas delicadas del café.</p>
                         </div>
@@ -125,9 +125,10 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/img/espresso.jpg" alt="Método Espresso" />
+                            <img src="{{ url_for('static', filename='assets/img/espresso.jpg') }}" alt="Método Espresso" />
                             <h3>Espresso</h3>
-                            <p>Concentrado y aromático. El corazón del ritual cafetero italiano, preparado con presión y precisión.</p>
+                            <p>Concentrado y aromático. El corazón del ritual cafetero italiano, preparado con presión y
+                                precisión.</p>
                         </div>
                         <div class="flip-card-back">
                             <h4 class="longText">¿Cómo prepararlo en casa?</h4>
@@ -145,7 +146,8 @@
                             <ul>
                                 <li>Café recién molido es el factor #1</li>
                                 <li>Usa una báscula digital si puedes, para controlar gramos y tiempo.</li>
-                                <li>La máquina no necesita ser cara, pero sí debe alcanzar 9 bares de presión reales.</li>
+                                <li>La máquina no necesita ser cara, pero sí debe alcanzar 9 bares de presión reales.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -156,10 +158,11 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/img/moka.jpg" alt="Método Moka" />
+                            <img src="{{ url_for('static', filename='assets/img/moka.jpg') }}" alt="Método Moka" />
                             <h3>Cafetera Moka</h3>
                             <p>
-                                Ícono de las cocinas italianas. Produce un café intenso y con cuerpo, ideal para amantes del espresso casero.
+                                Ícono de las cocinas italianas. Produce un café intenso y con cuerpo, ideal para amantes
+                                del espresso casero.
                             </p>
 
                         </div>
@@ -187,10 +190,11 @@
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
-                            <img src="assets/img/electrica.jpg" alt="Método Electrico" />
+                            <img src="{{ url_for('static', filename='assets/img/electrica.jpg') }}" alt="Método Electrico" />
                             <h3>Cafetera Eléctrica</h3>
                             <p>
-                                Práctica y popular. Si se usa bien, permite obtener un café limpio y equilibrado, ideal para el día a día.
+                                Práctica y popular. Si se usa bien, permite obtener un café limpio y equilibrado, ideal
+                                para el día a día.
                             </p>
 
                         </div>
@@ -227,6 +231,26 @@
             </ul>
         </section>
 
+        <section id="precios-cafe" class="section reveal">
+            <h2>Precios en tiendas chilenas</h2>
+            <div class="price-cards">
+                <div class="price-card" id="cafe-mandrake">
+                    <h3>Café Mandrake</h3>
+                    <p>Blend Espresso (1kg): <strong id="precio-mandrake">Cargando...</strong></p>
+                </div>
+                <div class="price-card" id="cafe-altura">
+                    <h3>Café Altura</h3>
+                    <p>Brasil Peru (250 g): <strong id="precio-altura">Cargando...</strong></p>
+                </div>
+                <div class="price-card" id="cafe-dLara">
+                    <h3>D'Lara</h3>
+                    <p>Blend Saphire El Salvador (250g): <strong id="precio-dLara">Cargando...</strong></p>
+                </div>
+            </div>
+        </section>
+
+
+
         <section id="contacto" class="section reveal">
             <h2>¿Te interesa saber más?</h2>
             <form id="contact-form">
@@ -241,8 +265,7 @@
     <footer>
         <p>© 2025 Café Artesanal. Todos los derechos reservados.</p>
     </footer>
-
+ <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
 </html>
-
