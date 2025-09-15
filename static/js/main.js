@@ -92,3 +92,23 @@ async function fetchPrices() {
     fetchPrices();
     setInterval(fetchPrices, 300000); // cada 5 minutos
 
+
+//Logica Boton volver arriba
+const boton = document.getElementById("btnVolverArriba");
+
+    // Mostrar el botón al hacer scroll hacia abajo
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            boton.style.display = "block";
+        } else {
+            boton.style.display = "none";
+        }
+    };
+
+    // Volver arriba con scroll suave
+    boton.addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });

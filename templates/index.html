@@ -22,6 +22,7 @@
                 <li><a href="#historia">Historia</a></li>
                 <li><a href="#filtrado">Métodos</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#precios-cafe">Precios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -235,16 +236,46 @@
             <h2>Precios en tiendas chilenas</h2>
             <div class="price-cards">
                 <div class="price-card" id="cafe-mandrake">
+                    <div class="Logo">
+                    <a href="https://cafemandrake.cl/products/blend-espresso-o-rei-da-praia-1kg" target="_blank">
+                      <img src="{{ url_for('static', filename='assets/img/cafe-mandrake.png') }}" alt="Café Mandrake">
+                    </a>
+                    </div>
                     <h3>Café Mandrake</h3>
                     <p>Blend Espresso (1kg): <strong id="precio-mandrake">Cargando...</strong></p>
+                    <div class="product_img">
+                        <a href="https://cafemandrake.cl/products/blend-espresso-o-rei-da-praia-1kg" target="_blank">
+                            <img src="{{ url_for('static', filename='assets/img/mandrake-blend-espresso-1kg.webp') }}" alt="Mandrake Blend espresso 1kg">
+                        </a>
+                    </div>
                 </div>
                 <div class="price-card" id="cafe-altura">
+                    <div class="Logo">
+                        <a href="https://cafealtura.cl/productos/blend-de-la-casa-peru-brasil/" target="_blank">
+                            <img src="{{ url_for('static', filename='assets/img/Cafe-Altura_logo.png') }}" alt="Café Altura">
+                        </a>
+                    </div>
                     <h3>Café Altura</h3>
                     <p>Brasil Peru (250 g): <strong id="precio-altura">Cargando...</strong></p>
+                    <div class="product_img">
+                        <a href="https://cafealtura.cl/productos/blend-de-la-casa-peru-brasil/" target="_blank">
+                            <img src="{{ url_for('static', filename='assets/img/Altura-blend-Peru-Brasil.jpg') }}" alt="Altura Blend Peru Brasil">
+                        </a>
+                    </div>
                 </div>
                 <div class="price-card" id="cafe-dLara">
-                    <h3>D'Lara</h3>
+                    <div class="Logo">
+                        <a href="https://cafedlara.cl/collections/grano-molido/products/cafe-en-grano-y-molido-blend-saphire-el-salvador" target="_blank">
+                            <img src="{{ url_for('static', filename='assets/img/cafe-de-lara.png') }}" alt="Café D'Lara">
+                        </a>
+                    </div>
+                    <h3 class="dLara">D'Lara</h3>
                     <p>Blend Saphire El Salvador (250g): <strong id="precio-dLara">Cargando...</strong></p>
+                    <div class="product_img">
+                        <a href="https://cafedlara.cl/collections/grano-molido/products/cafe-en-grano-y-molido-blend-saphire-el-salvador" target="_blank">
+                            <img src="{{ url_for('static', filename='assets/img/dLara-Blend-Saphire-ElSalvador.webp') }}" alt="Blend Saphire El Salvador">
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -261,6 +292,8 @@
             </form>
         </section>
     </main>
+    <button id="btnVolverArriba" title="Volver arriba">↑</button>
+
 
     <footer>
         <p>© 2025 Café Artesanal. Todos los derechos reservados.</p>

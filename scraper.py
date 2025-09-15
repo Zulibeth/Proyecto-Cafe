@@ -1,26 +1,10 @@
 
+import re
 import requests
 from bs4 import BeautifulSoup
 
 
-    #PRUEBA 1
-    # url = "https://cafealtura.cl/productos/blend-de-la-casa-peru-brasil/"
-    # r = requests.get(url)
-    # r.encoding = 'utf-8'
-    # soup = BeautifulSoup(r.text, 'html.parser')
 
-    # print(soup.prettify())
-
-    # price = soup.select_one('p.price > span.woocommerce-Price-amount')
-    # #return price.text if price else "No disponible"
-    # if price:
-    #     print("Elemento encontrado:", price)
-    #     return price.text
-    # else:
-    #     print("Elemento no encontrado")
-    #     return "No disponible"
-
-    #PRUEBA 2
 def get_price_altura():
     url = "https://cafealtura.cl/productos/blend-de-la-casa-peru-brasil/"
     headers = {
@@ -32,21 +16,19 @@ def get_price_altura():
 
     # Busca el párrafo que contiene el rango de precio
     price_element = soup.select_one('p.price')
-    if price_element:
-        return price_element.text.strip()
-    return "Precio no disponible"
-  
+    precio_raw = price_element.text if price_element else "No disponible"
+    precio_final = limpiar_precio(precio_raw)
+    
+    return precio_final
+
+def limpiar_precio(precio_raw):
+    if "Rango de precios" in precio_raw:
+        return precio_raw.split("Rango de precios")[0].strip()
+    return precio_raw.strip()
 
 
-    #PRUEBA 1
-    # url = "https://cafemandrake.com/product/blend-espresso-1kg/"
-    # r = requests.get(url)
-    # soup = BeautifulSoup(r.text, 'html.parser')
-    # price = soup.select_one('span.woocommerce-Price-amount')
-    # return price.text if price else "No disponible"
 
-
-    #PRUEBA 2 
+    
 def get_price_mandrake():
     url = "https://cafemandrake.cl/products/blend-espresso-o-rei-da-praia-1kg"
     headers = {
@@ -58,17 +40,31 @@ def get_price_mandrake():
 
         # Busca el párrafo que contiene el rango de precio
     price_element = soup.select_one('price-list')
-    if price_element:
-        return price_element.text.strip()
-    return "Precio no disponible"
+    precio_raw = price_element.text if price_element else "No disponible"
+    return limpiar_precio(precio_raw)
+    
 
 
-# def get_price_58market():
-#     url = "https://58market.cl/product/cafe-y-bebidas-en-polvo/sello-rojo-cafe-600gr"
-#     r = requests.get(url)
-#     soup = BeautifulSoup(r.text, 'html.parser')
-#     price = soup.select_one('span.price') or soup.find('p', class_='price')
-#     return price.text.strip() if price else "No disponible"
+def limpiar_precio(precio_raw):
+    # Buscar todos los patrones de precios tipo 10.900, $10.900, etc.
+    precios = re.findall(r'\$?\d{1,3}(?:\.\d{3})+', precio_raw)
+
+    if not precios:
+        return "Precio no válido"
+
+    # Si hay 2 o más precios, asumimos que es un rango
+    if len(precios) >= 2:
+        precio1 = precios[0] if precios[0].startswith('$') else f"${precios[0]}"
+        precio2 = precios[1] if precios[1].startswith('$') else f"${precios[1]}"
+        return f"{precio1} - {precio2}"
+
+    # Si hay solo 1 precio, lo devolvemos formateado
+    precio = precios[0]
+    if not precio.startswith('$'):
+        precio = f"${precio}"
+    return precio
+
+
 
 
 def get_price_dLara():
@@ -85,19 +81,6 @@ def get_price_dLara():
     if price_element:
         return price_element.text.strip()
     return "Precio no disponible"
-
-print(get_price_dLara())
-    #PRUEBA 2
-    # try:
-    #     url = "https://58market.cl/product/cafe-y-bebidas-en-polvo/sello-rojo-cafe-600gr"
-    #     r = requests.get(url, timeout=10)
-    #     soup = BeautifulSoup(r.text, 'html.parser')
-    #     price = soup.select_one('span.price') or soup.find('p', class_='price')
-    #     return price.text.strip() if price else "No disponible"
-    # except Exception as e:
-    #     print(f"Error al obtener precio de +58 Market: {e}")
-    #     return "No disponible"
-
 
 
 
