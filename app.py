@@ -15,7 +15,7 @@ update_prices()
 
 # Programar actualizaciones cada 5 minutos
 scheduler = BackgroundScheduler()
-scheduler.add_job(update_prices, 'interval', minutes=5)
+scheduler.add_job(update_prices, 'interval', minutes=1440)
 scheduler.start()
 
 # Ruta para servir el HTML
@@ -28,4 +28,4 @@ def precios():
     return jsonify(cache["data"])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False, host='0.0.0.0', port=5000)
