@@ -1,8 +1,8 @@
 Proyecto: Landing Page - Cultura del Café en Chile ☕
 ==================================================
 
-Desarrollado por: [Zulibeth T]
-Rol: Desarrollador Front-End
+Desarrollado por: [Zulibeth Torres]
+
 
 Descripción General
 --------------------
@@ -59,3 +59,4 @@ Mejoras de Experiencia de Usuario (UX)
 - Transiciones suaves y microinteracciones en botones y elementos visuales.
 - Estructura clara del contenido y jerarquía visual coherente.
 - Accesibilidad básica considerada (colores con contraste, etiquetas semánticas).
+
